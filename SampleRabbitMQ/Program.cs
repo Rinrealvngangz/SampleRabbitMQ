@@ -16,7 +16,10 @@ namespace SampleRabbitMQ
           using  IConnection conn = factory.CreateConnection();
           using  var  channel = conn.CreateModel();
          //  QueuePublisher.Publisher(channel);
-         DirectExchangePublisher.Publisher(channel);
+        //   DirectExchangePublisher.Publisher(channel);
+        //   TopicExchangePublisher.Publisher(channel);
+        //  HeaderExchangePublisher.Publisher(channel);
+            FanoutExchangePublisher.Publisher(channel);
         }
     }
 }
